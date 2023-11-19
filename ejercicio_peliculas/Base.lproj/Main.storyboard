@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zMx-gS-tnb">
-    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <device id="ipad12_9" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -16,8 +16,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8Z-qP-LKK">
-                                <rect key="frame" x="491" y="672.5" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="phk-Rc-B1S">
+                                <rect key="frame" x="38" y="134" width="43" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="lPD-TN-LHb">
+                                <rect key="frame" x="38" y="176" width="948" height="598"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0jJ-4Y-tWm">
+                                        <rect key="frame" x="0.0" y="0.0" width="948" height="315"/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9v-iQ-OyP">
+                                        <rect key="frame" x="0.0" y="336" width="948" height="262"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="262" id="xfT-IR-S2e"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Año" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pkf-Xw-oxe">
+                                <rect key="frame" x="956.5" y="134" width="30.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -26,17 +51,27 @@
                         <viewLayoutGuide key="safeArea" id="IRn-8W-ej0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="b8Z-qP-LKK" firstAttribute="centerY" secondItem="JKp-Kg-9hY" secondAttribute="centerY" id="HWw-EX-XN0"/>
-                            <constraint firstItem="b8Z-qP-LKK" firstAttribute="centerX" secondItem="JKp-Kg-9hY" secondAttribute="centerX" id="co3-yt-GbE"/>
+                            <constraint firstItem="phk-Rc-B1S" firstAttribute="top" secondItem="IRn-8W-ej0" secondAttribute="top" constant="64" id="MzI-jp-Mc4"/>
+                            <constraint firstItem="lPD-TN-LHb" firstAttribute="centerX" secondItem="JKp-Kg-9hY" secondAttribute="centerX" id="V1U-ha-QWf"/>
+                            <constraint firstItem="phk-Rc-B1S" firstAttribute="leading" secondItem="lPD-TN-LHb" secondAttribute="leading" id="caJ-XQ-NnJ"/>
+                            <constraint firstItem="phk-Rc-B1S" firstAttribute="leading" secondItem="IRn-8W-ej0" secondAttribute="leading" constant="38" id="hdY-Ax-37r"/>
+                            <constraint firstItem="lPD-TN-LHb" firstAttribute="top" secondItem="phk-Rc-B1S" secondAttribute="bottom" constant="21.5" id="n6E-el-QWf"/>
+                            <constraint firstItem="IRn-8W-ej0" firstAttribute="bottom" secondItem="lPD-TN-LHb" secondAttribute="bottom" constant="592" id="qtu-12-2HW"/>
+                            <constraint firstItem="Pkf-Xw-oxe" firstAttribute="trailing" secondItem="lPD-TN-LHb" secondAttribute="trailing" id="vs0-0X-yjr"/>
+                            <constraint firstItem="phk-Rc-B1S" firstAttribute="baseline" secondItem="Pkf-Xw-oxe" secondAttribute="baseline" id="yxq-qN-aA4"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="etiqueta" destination="b8Z-qP-LKK" id="TnY-9R-AgJ"/>
+                        <outlet property="descripcion" destination="T9v-iQ-OyP" id="9ZR-W7-kEV"/>
+                        <outlet property="fecha" destination="Pkf-Xw-oxe" id="Fqn-SM-OFq"/>
+                        <outlet property="imagen" destination="0jJ-4Y-tWm" id="cLc-ZB-wYm"/>
+                        <outlet property="stackView" destination="lPD-TN-LHb" id="0Em-7G-DTf"/>
+                        <outlet property="titulo" destination="phk-Rc-B1S" id="YXp-QD-m4c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MhO-x9-aj0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="905" y="1095"/>
+            <point key="canvasLocation" x="904.10156249999989" y="1094.143484626647"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="DQ2-XE-Qq0">
@@ -72,7 +107,7 @@
             <objects>
                 <navigationController id="1Oz-6i-PYu" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9dP-82-cYc">
-                        <rect key="frame" x="0.0" y="24" width="420" height="50"/>
+                        <rect key="frame" x="0.0" y="20" width="420" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -98,6 +133,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

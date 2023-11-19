@@ -49,7 +49,10 @@ class TableViewController: UITableViewController {
 
             // Conexión con el controlador detalle
             let detailViewController = splitViewController!.viewController(for: .secondary) as? DetailViewController
-            detailViewController?.etiqueta.text = pelicula.titulo
+            
+            //  detailViewController?.etiqueta.text = pelicula
+            detailViewController?.didChangePelicula(with: pelicula)
+
             
             // Si el controlador detalle no está presentado lo mostramos
             if !detailViewController!.isBeingPresented {
